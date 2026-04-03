@@ -1,0 +1,25 @@
+<button (click)="getBooks()">Get Books</button>
+
+<button>click</button>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Description</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.description }}</td>
+      <td>{{ book.created | date:'short' }}</td>
+    </tr>
+  </tbody>
+</table>
